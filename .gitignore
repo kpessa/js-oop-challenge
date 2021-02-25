@@ -1,1 +1,3 @@
+node_modules/
 .starter-files/
+.jshintrc
