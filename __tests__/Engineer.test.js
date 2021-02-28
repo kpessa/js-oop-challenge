@@ -8,4 +8,5 @@ test('Check to see if engineer created successfully', () => {
   expect(engineer.email).toEqual(expect.any(String));
   expect(engineer.github).toEqual(expect.any(String));
   expect(engineer.getGithub()).toEqual(engineer.github);
+  expect(engineer.getRole()).toEqual('Engineer');
 });

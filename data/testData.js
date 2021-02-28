@@ -1,24 +1,42 @@
 let data = {
-  name: 'Kurt',
+  name: 'Jared',
   id: '1',
-  email: 'kpessa@gmail.com',
-  number: '321982325',
+  email: 'jared@fakemail.com',
+  number: '1',
   members: [
     {
       type: 'Engineer',
-      name: 'Mark',
+      name: 'Alec',
       id: '2',
-      email: 'mark@me.com',
-      extra: 'markp',
+      email: 'alec@fakemail.com',
+      extra: 'ibealec',
+      confirmAddTeamMember: true,
+    },
+    {
+      type: 'Engineer',
+      name: 'Grace',
+      id: '3',
+      email: 'grace@fakemail.com',
+      extra: 'gchoi2u',
+      confirmAddTeamMember: true,
+    },
+    {
+      type: 'Engineer',
+      name: 'Tammer',
+      id: '4',
+      email: 'tammer@fakemail.com',
+      extra: 'tammerg',
       confirmAddTeamMember: true,
     },
     {
       type: 'Intern',
-      name: 'Shelley',
-      id: '3',
-      email: 'shellpess@me.com',
-      extra: 'Palm Beach Atlantic',
+      name: 'John',
+      id: '5',
+      email: 'john@fakemail.com',
+      extra: 'ZUniversity',
       confirmAddTeamMember: false,
     },
   ],
 };
+
+module.exports = data;
