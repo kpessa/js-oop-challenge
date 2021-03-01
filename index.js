@@ -80,6 +80,17 @@ makeObjects = d => {
   return members;
 };
 
+function createWebpage(data) {
+  // console.log(data);
+  let members = makeObjects(data);
+  let html = ``;
+  members.forEach(m => (html += createHTML(m)));
+  let template = fs.readFileSync('./src/template.html', { encoding: 'utf-8' });
+  template = template.replace('id="members">', `id="members">` + html);
+  fs.writeFileSync('./dist/index.html', template);
+  console.log('Dynamic HTML published at -> ./dist/index.html');
+}
+
 function init() {
   const args = process.argv.slice(2, process.argv.length);
 
@@ -96,16 +107,6 @@ function init() {
       .catch(err => {
         console.log(err);
       });
-}
-
-function createWebpage(data) {
-  // console.log(data);
-  let members = makeObjects(data);
-  let html = ``;
-  members.forEach(m => (html += createHTML(m)));
-  let template = fs.readFileSync('./src/template.html', { encoding: 'utf-8' });
-  template = template.replace('id="members">', `id="members">` + html);
-  fs.writeFileSync('./dist/index.html', template);
 }
 
 // Function call to initialize app
